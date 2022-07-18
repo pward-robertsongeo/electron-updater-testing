@@ -75,6 +75,8 @@ app.on('ready', async () => {
     }
   }
   createWindow()
+
+  autoUpdater.checkForUpdatesAndNotify()
 })
 
 ipc.on('app:check:update', async (_event, key) => {

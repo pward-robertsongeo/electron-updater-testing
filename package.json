@@ -14,10 +14,12 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
     "app:dir": "electron-builder --dir",
-    "app:dist": "electron-builder"
+    "app:dist": "electron-builder",
+    "release": "electron-builder"
   },
   "build": {
-    "appId": "my.testing.app"
+    "appId": "my.testing.app",
+     "publish": ["github"]
   },
   "main": "background.js",
   "dependencies": {
