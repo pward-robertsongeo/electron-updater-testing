@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js electron:serve
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js release
 
 PATH: 
-  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Users\PWard\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\TortoiseGit\bin;C:\WINDOWS\System32\OpenSSH\;C:\Users\PWard\.cargo\bin;C:\Users\PWard\.windows-build-tools\python27\;C:\Users\PWard\.windows-build-tools\python27;C:\Users\PWard\AppData\Local\Microsoft\WindowsApps;C:\Users\PWard\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PWard\AppData\Local\Yarn\bin;C:\Users\PWard\AppData\Local\atom\bin;C:\Users\PWard\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\PWard\AppData\Local\Microsoft\WindowsApps;
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\TortoiseGit\bin;C:\WINDOWS\System32\OpenSSH\;C:\Users\PWard\.cargo\bin;C:\Users\PWard\.windows-build-tools\python27\;C:\Users\PWard\.windows-build-tools\python27;C:\Users\PWard\AppData\Local\Microsoft\WindowsApps;C:\Users\PWard\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PWard\AppData\Local\Yarn\bin;C:\Users\PWard\AppData\Local\atom\bin;C:\Users\PWard\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\PWard\AppData\Local\Microsoft\WindowsApps;C:\Users\PWard\AppData\Local\GitHubDesktop\bin
 
 Yarn version: 
   1.19.2
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: D:\update app\update\package.json: Unexpected token } in JSON at position 640
+  SyntaxError: C:\Users\PWard\Documents\GitHub\electron-updater-testing\package.json: Unexpected string in JSON at position 698
       at JSON.parse (<anonymous>)
       at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -38,10 +38,13 @@ npm manifest:
       "postinstall": "electron-builder install-app-deps",
       "postuninstall": "electron-builder install-app-deps",
       "app:dir": "electron-builder --dir",
-      "app:dist": "electron-builder"
+      "app:dist": "electron-builder",
+      "release": "electron-builder"
     },
     "build": {
       "appId": "my.testing.app",
+      "extends": null
+       "publish": ["github"]
     },
     "main": "background.js",
     "dependencies": {
